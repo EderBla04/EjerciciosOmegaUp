@@ -6,29 +6,44 @@ using namespace std;
 
 int main() {
 
+    FastIO;
+
     int n, cont=0;
+
+
 
     cin>>n;
 
-    if(n==1)  cout<<"NO";
+    int arreglo[n];
+
+    for(int i=0;i<n;i++) {
+        cin>>arreglo[i];
+    }
+
+    for(int i=0;i<n;i++) {
+
+        if(arreglo[i]==1)  cout<<"No Primo"<<endl;
+
+        else {
+            for(int j=1; j<=arreglo[i]; j++) {
+
+                if( arreglo[i]% j == 0) {
+                    cont++;
+                }
 
 
-    else {
-        for(int i=1; i<=n; i++) {
-
-            if(n % i == 0) {
-                cont++;
             }
 
+            if(cont > 2){
 
+                cout<<"No Primo"<<endl;
+            }else cout<<"Si Primo"<<endl;
         }
 
-        if(cont > 2){
-
-            cout<<"NO";
-        }else cout<<"SI";
     }
-    FastIO;
+
+
+
 
     return 0;
 }
