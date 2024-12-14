@@ -43,15 +43,13 @@ int main() {
             caso+= ' '+ aux;
 
             if (caso=="LLEGA ALUMNO") {
-                aux.clear();
-                caso.clear();
+
                 ss >> nombre;
                 alumnos.push(nombre);
             }
 
             else if (caso=="LLEGA TRABAJADOR") {
-                aux.clear();
-                caso.clear();
+
                 ss >> nombre;
                 trabajadores.push(nombre);
             }
